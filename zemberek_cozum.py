@@ -13,7 +13,7 @@ def zemberek_baslat():
     # JVM başlat
     # Aşağıdaki adresleri java sürümünüze ve jar dosyasının bulunduğu klasöre göre değiştirin
     jpype.startJVM("/usr/lib/jvm/java-8-oracle/jre/lib/amd64/server/libjvm.so",
-             "-Djava.class.path=/home/axax/PyCharmProjects/trdp/zemberek-tum-2.0.jar", "-ea")
+             "-Djava.class.path=zemberek-tum-2.0.jar", "-ea")
     # Türkiye Türkçesine göre çözümlemek için gerekli sınıfı hazırla
     Tr = jpype.JClass("net.zemberek.tr.yapi.TurkiyeTurkcesi")
     # tr nesnesini oluştur
