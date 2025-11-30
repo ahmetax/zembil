@@ -13,6 +13,9 @@ zemberek_interaktif.py betiğini kullanarak Türkçe sözcükleri analiz edebili
    git clone https://github.com/ahmetax/zembil.git
    cd zembil
    ```
+  
+## Zemberek Jar dosyasını kullanarak Türkçe Kelime Analizi Yapmak
+  
    Sanal ortam kullanmanızı öneririm: (Aşağıdaki kodlar Ubuntu 24.04 içindir. Kendi sisteminize göre uyarlayın.)
    
    ```bash
@@ -31,5 +34,33 @@ zemberek_interaktif.py betiğini kullanarak Türkçe sözcükleri analiz edebili
    ```
 
 Benim kullandığım python sürümü 3.12'dir. Fakat daha yeni sürümleri de kullanabilirsiniz.
+
+## TRmorph Sistemiyle Python Kullanarak Türkçe Kelime Analizi Yapmak
+
+trmorph.fst dosyasını oluşturmak için gerekli bilgileri https://github.com/coltekin/TRmorph sayfasında
+bulabilirsiniz.
+
+1. Bilgisayarınıza foma sistemini kurun:
+
+   ```bash
+   sudo apt install foma-bin
+   ```
+
+2. **Çağrı Gültekin**'in, github deposundaki kaynak kodlarını kullanarak **trmorph.fst** dosyasını oluşturun: 
+
+   ```bash
+   cd github
+   git clone https://https://github.com/coltekin/TRmorph.git
+   cd TRmorph
+   make
+    ```
+
+3. Oluşan **foma.fst** dosyasını zembil klasörüne kopyalayın.
+
+4. **trmorph.py** betiğini kullanmak için aşağıdaki komutu verin:
+
+   ```bash
+   python trmorph.py
+   ```
 
 
